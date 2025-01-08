@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <title>Stan za najam - Savica</title>
+
+  <!-- Skeleton CSS (opcionalno, za bolji osnovni dizajn) -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
+  />
+
+  <!-- Lightbox2 CSS (za uvećani prikaz slika - nije obavezno za ikone, ali ostavljamo ako već imate galeriju) -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/css/lightbox.min.css"
+  />
+
+  <!-- Font Awesome 6 (za besplatne ikone) -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+  />
+
+  <!-- Google Font: Montserrat (ili neki drugi) -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    body {
+      margin: 20px;
+      font-family: 'Montserrat', sans-serif;
+      color: #333;
+    }
+
+    header h1 {
+      margin-bottom: 0;
+    }
+    header p {
+      margin-bottom: 20px;
+      color: #555;
+    }
+
+    .image-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 30px;
+    }
+
+    /* Thumbnail slike za galeriju */
+    .image-gallery a img {
+      width: 180px;
+      height: auto;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      object-fit: cover;
+    }
+
+    .apartment-details {
+      margin-bottom: 30px;
+    }
+
+    h3 {
+      margin-top: 30px;
+      margin-bottom: 10px;
+    }
+
+    ul li {
+      margin-bottom: 5px;
+    }
+
+    /* Dodatna stilizacija ikona */
+    .fa {
+      color: #ff7043; /* Neka topla narančasta, po želji */
+      margin-right: 8px;
+    }
+
+    footer {
+      margin-top: 40px;
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid #ddd;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Naslovna sekcija -->
+    <header>
+      <h1>Trosobni stan na Savici</h1>
+      <p>Zinke Kunc 3d</p>
+    </header>
+
+    <!-- Galerija slika (ako koristite Lightbox2) -->
+    <section class="image-gallery">
+      <a href="img/areal.png" data-lightbox="stan-galerija" data-title="Stan ima tri prozora i loggiu na južnoj strani zgrade, na šestom (predzadnjem) katu">
+        <img src="img/areal.png" alt="Stan ima tri prozora i loggiu na južnoj strani zgrade, na šestom (predzadnjem) katu" />
+      </a>
+      <a href="img/bracna.jpg" data-lightbox="stan-galerija" data-title="Stan ima tri prozora i loggiu na južnoj strani zgrade, na šestom (predzadnjem) katu">
+        <img src="img/bracna.jpg" alt="Stan ima tri prozora i loggiu na južnoj strani zgrade, na šestom (predzadnjem) katu" />
+      </a>
+      <a href="img/kauc.jpg" data-lightbox="stan-galerija" data-title="Stan ima tri prozora i loggiu na južnoj strani zgrade, na šestom (predzadnjem) katu">
+        <img src="img/kauc.jpg" alt="Kauč" />
+      </a>
+      <a href="img/pogled-balkon.jpg" data-lightbox="stan-galerija" data-title="Kuhinja">
+        <img src="img/pogled-balkon.jpg" alt="Kuhinja" />
+      </a>
+      <a href="img/kuhinja-prozor.jpg" data-lightbox="stan-galerija" data-title="Kuhinja">
+        <img src="img/kuhinja-prozor.jpg" alt="Kuhinja" />
+      </a>
+      <a href="img/kuhinja.jpg" data-lightbox="stan-galerija" data-title="Kuhinja">
+        <img src="img/kuhinja.jpg" alt="Kuhinja" />
+      </a>
+      <a href="img/blag.JPG" data-lightbox="stan-galerija" data-title="Kuhinja">
+        <img src="img/blag.JPG" alt="Kuhinja" />
+      </a>
+    </section>
+    <section class="image-gallery">
+      <a href="img/blagovaonica.JPG" data-lightbox="stan-galerija" data-title="Kuhinja">
+        <img src="img/blagovaonica.JPG" alt="Kuhinja" />
+      </a>
+      <a href="img/hodnik.jpg" data-lightbox="stan-galerija" data-title="Kuhinja">
+        <img src="img/hodnik.jpg" alt="Kuhinja" />
+      </a>
+      <a href="img/kada.jpg" data-lightbox="stan-galerija" data-title="Kuhinja">
+        <img src="img/kada.jpg" alt="Kuhinja" />
+      </a>
+      <a href="img/djecija.JPG" data-lightbox="stan-galerija" data-title="Kuhinja">
+        <img src="img/djecija.JPG" alt="Kuhinja" />
+      </a>
+      <a href="img/vrata-balkona.jpg" data-lightbox="stan-galerija" data-title="Kuhinja">
+        <img src="img/vrata-balkona.jpg" alt="Kuhinja" />
+      </a>
+      <a href="img/lavandin.jpg" data-lightbox="stan-galerija" data-title="Kuhinja">
+        <img src="img/lavandin.jpg" alt="Kuhinja" />
+      </a>
+    </section>
+
+    <section class="apartment-details">
+      <ul>
+        <li><i class="fa-solid fa-building"></i> star 16 godina · na šestom katu s liftom</li>
+        <li><i class="fa-solid fa-ruler-combined"></i> 64 m<sup>2</sup> unutarnjeg prostora + Loggia 4 m<sup>2</sup></li>
+        <li><i class="fa-solid fa-bed"></i> Dvije spavaće sobe + <i class="fa-solid fa-couch"></i> Dnevni boravak s blagovaonicom + <i class="fa-solid fa-sink"></i> Odvojena kuhinja i smočnica</li>
+        <li><i class="fa-solid fa-sun"></i> Orijentacija jug  <i class="fa-solid fa-tree"></i> Pogled na park </li>
+        <li><i class="fa-solid fa-fire"></i> Plinsko etažno grijanje</li>
+      </ul>
+    </section>
+
+    <!-- Kontakt informacije -->
+    <section class="contact">
+      <h3>Kontakt</h3>
+      <p>
+        <i class="fa-solid fa-envelope"></i>
+        Email: <a href="mailto:stan.najam@example.com">stan.najam@example.com</a>
+      </p>
+      <p>
+        <i class="fa-solid fa-phone"></i>
+        Telefon: <a href="tel:+385911234567">+385 91 123 4567</a>
+      </p>
+    </section>
+  </div>
+
+  <!-- jQuery (ako koristite Lightbox2) -->
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+  ></script>
+
+  <!-- Lightbox2 JS (za uvećani prikaz slika) -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/js/lightbox.min.js"
+  ></script>
+</body>
+</html>
