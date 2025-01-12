@@ -1,161 +1,208 @@
 <!DOCTYPE html>
 <html lang="hr">
 <head>
-  <meta charset="UTF-8">
-  <title>Stan za najam - Savica</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stan za najam - Foto galerija</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
-  />
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/css/lightbox.min.css"
-  />
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-  />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"
-    rel="stylesheet"
-  />
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
 
-  <style>
-    body {
-      margin: 20px;
-      font-family: 'Montserrat', sans-serif;
-      color: #333;
-    }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
 
-    header h1 {
-      margin-bottom: 0;
-    }
-    header p {
-      margin-bottom: 20px;
-      color: #555;
-    }
+        header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
 
-    .image-gallery {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-bottom: 30px;
-    }
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
 
-    .image-gallery a img {
-      width: 180px;
-      height: auto;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      object-fit: cover;
-    }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
 
-    .apartment-details {
-      margin-bottom: 30px;
-    }
+        .gallery-item {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
 
-    h3 {
-      margin-top: 30px;
-      margin-bottom: 10px;
-    }
+        .gallery-item:hover {
+            transform: translateY(-5px);
+        }
 
-    ul li {
-      margin-bottom: 5px;
-    }
+        .gallery-item.landscape img {
+            aspect-ratio: 16/9;
+        }
 
-    .fa {
-      color: #ff7043;
-      margin-right: 8px;
-    }
+        .gallery-item.portrait img {
+            aspect-ratio: 9/16;
+        }
 
-    footer {
-      margin-top: 40px;
-      text-align: center;
-      padding-top: 20px;
-      border-top: 1px solid #ddd;
-    }
-  </style>
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .caption {
+            padding: 1rem;
+            background: white;
+        }
+
+        .caption h3 {
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .caption p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <h1>Trosobni stan na Savici</h1>
-      <p>Zinke Kunc 3d</p>
-    </header>
+    <div class="container">
+        <header>
+            <h1>Trosobni stan za najam na Savici</h1>
+            <p><a href="mailto:hrvoje.simic@gmail.com">hrvoje.simic@gmail.com</a> — <a href="tel:0916044424">091 60 444 24</a></p>
+        </header>
 
-    <section class="image-gallery">
-      <a href="img/areal.png" data-lightbox="stan-galerija" data-title="Pogled iz zraka na zgradu s jugozapadne strane. Stan ima tri prozora i loggiu na južnoj strani zgrade, na šestom (predzadnjem) katu.">
-        <img src="img/areal.png" alt="Zračni pogled" />
-      </a>
-      <a href="img/bracna.jpg" data-lightbox="stan-galerija" data-title="Spavaća soba s bračnim krevetom i walk-in ormarom.">
-        <img src="img/bracna.jpg" alt="Bračna soba" />
-      </a>
-      <a href="img/kauc.jpg" data-lightbox="stan-galerija" data-title="Stan ima tri prozora i loggiu na južnoj strani zgrade, na šestom (predzadnjem) katu">
-        <img src="img/kauc.jpg" alt="Kauč" />
-      </a>
-      <a href="img/pogled-balkon.jpg" data-lightbox="stan-galerija" data-title="Pogled s loggie na veliki park.">
-        <img src="img/pogled-balkon.jpg" alt="Pogled" />
-      </a>
-      <a href="img/kuhinja-prozor.jpg" data-lightbox="stan-galerija" data-title="Kuhinja ima prozor na loggiu.">
-        <img src="img/kuhinja-prozor.jpg" alt="Kuhinja" />
-      </a>
-      <a href="img/kuhinja.jpg" data-lightbox="stan-galerija" data-title="Kuhinja je opremljena hladnjakom, sudoperom, perilicom suđa, pećnicom, kuhalom na plin, napom i mikrovalnom pećnicom.">
-        <img src="img/kuhinja.jpg" alt="Kuhinja" />
-      </a>
-      <a href="img/blag.JPG" data-lightbox="stan-galerija" data-title="Blagovaonički stol s četiri stolice, naljepnica na zidu za pisanje kredom.">
-        <img src="img/blag.JPG" alt="Blagovaonica" />
-      </a>
-    </section>
-    <section class="image-gallery">
-      <a href="img/blagovaonica.jpg" data-lightbox="stan-galerija" data-title="Stakleni blagovaonički stol se može razvući na dvostruku duljinu. ">
-        <img src="img/blagovaonica.jpg" alt="blagovaonica" />
-      </a>
-      <a href="img/hodnik.jpg" data-lightbox="stan-galerija" data-title="U hodniku su dva velika ormara s kliznim vratima.">
-        <img src="img/hodnik.jpg" alt="Hodnik" />
-      </a>
-      <a href="img/kada.jpg" data-lightbox="stan-galerija" data-title="Velika kutna kada">
-        <img src="img/kada.jpg" alt="Velika kada" />
-      </a>
-      <a href="img/djecija.JPG" data-lightbox="stan-galerija" data-title="Manja spavaća soba ima krevet na kat, dva ormara i stol">
-        <img src="img/djecija.JPG" alt="Manja spavaća soba" />
-      </a>
-      <a href="img/vrata-balkona.jpg" data-lightbox="stan-galerija" data-title="Loggia">
-        <img src="img/vrata-balkona.jpg" alt="Loggia" />
-      </a>
-      <a href="img/lavandin.jpg" data-lightbox="stan-galerija" data-title="U kupaonici je veliki umivaonik">
-        <img src="img/lavandin.jpg" alt="umivaonik" />
-      </a>
-    </section>
+        <div class="gallery">
+          <div class="gallery-item landscape">
+              <img src="img/areal.png" alt="Dnevni boravak">
+              <div class="caption">
+                  <h3>Južna orijentacija</h3>
+                  <p>Naš stan se nalazi na južnoj strani šestog kata zgrade u Zinke Kunc 3d. Ima lift :)</p>
+              </div>
+          </div>
+      
+          <div class="gallery-item landscape">
+              <img src="/img/pogled-balkon.jpg" alt="Pogled">
+              <div class="caption">
+                  <h3>Pogled</h3>
+                  <p>Stan gleda na druge zgrade i park Marije Ružičke Strozzi na Savici.</p>
+              </div>
+          </div>
 
-    <section class="apartment-details">
-      <ul>
-        <li><i class="fa-solid fa-building"></i> star 16 godina · na šestom katu s liftom</li>
-        <li><i class="fa-solid fa-ruler-combined"></i> 64 m<sup>2</sup> unutarnjeg prostora + Loggia 4 m<sup>2</sup></li>
-        <li><i class="fa-solid fa-bed"></i> Dvije spavaće sobe + <i class="fa-solid fa-couch"></i> Dnevni boravak s blagovaonicom + <i class="fa-solid fa-sink"></i> Odvojena kuhinja i smočnica</li>
-        <li><i class="fa-solid fa-sun"></i> Orijentacija jug  <i class="fa-solid fa-tree"></i> Pogled na park </li>
-        <li><i class="fa-solid fa-fire"></i> Plinsko etažno grijanje</li>
-      </ul>
-    </section>
+          <div class="gallery-item landscape">
+              <img src="/img/kauc.jpg" alt="Dnevni">
+              <div class="caption">
+                  <h3>Dnevni boravak</h3>
+                  <p>Dnevni boravak ima prozor i izlaz na loggiu. Kutna garnitura ima ugrađen ležaj i sanduk.</p>
+              </div>
+          </div>
 
-    <section class="contact">
-      <h3>Kontakt</h3>
-      <p>
-        <i class="fa-solid fa-envelope"></i>
-        Email: <a href="mailto:stan.najam@example.com">stan.najam@example.com</a>
-      </p>
-      <p>
-        <i class="fa-solid fa-phone"></i>
-        Telefon: <a href="tel:+385911234567">+385 91 123 4567</a>
-      </p>
-    </section>
-  </div>
+          <div class="gallery-item landscape">
+            <img src="img/blag.JPG" alt="Kuhinja">
+            <div class="caption">
+                <h3>Blagovaonica</h3>
+                <p>Blagovaonica je spojena s dnevnim boravkom. Stakleni stol se može razvući na duplu duljinu.</p>
+            </div>
+          </div>
+    
+          <div class="gallery-item landscape">
+              <img src="/img/kuhinja.jpg" alt="Kuhinja">
+              <div class="caption">
+                  <h3>Kuhinja</h3>
+                  <p>Kuhinja je opremljena hladnjakom, sudoperom, perilicom suđa, pećnicom, kuhalom na plin, napom i mikrovalnom pećnicom.</p>
+              </div>
+          </div>
+      
+          <div class="gallery-item landscape">
+            <img src="img/bracna.jpg" alt="Kupaonica">
+            <div class="caption">
+                <h3>Glavna spavaća soba</h3>
+                <p>Sadrži veliki bračni krevet i walk-in ormar.</p>
+            </div>
+          </div>
+        </div>
 
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-  ></script>
-  <script
-    src="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/js/lightbox.min.js"
-  ></script>
+        <div>
+          <img src="img/tlocrt.png" alt="Tlocrt">
+        </div>
+
+        <div class="gallery">
+          <div class="gallery-item portrait">
+              <img src="img/blagovaonica.jpg" alt="Spavaća soba">
+              <div class="caption">
+                  <h3></h3>
+                  <p></p>
+              </div>
+          </div>
+
+        
+          <div class="gallery-item portrait">
+            <img src="img/vrata-balkona.jpg" alt="Vrata balkona">
+            <div class="caption">
+                <p>Izlaz na balkon s pogledom na park.</p>
+            </div>
+          </div>
+            
+          <div class="gallery-item portrait">
+            <img src="img/hodnik.jpg" alt="Hodnik">
+            <div class="caption">
+                <p>Hodnik je prostran, s puno mjesta za skladištenje. Stan ima plinsko etažno grijanje.</p>
+            </div>
+          </div>
+
+          <div class="gallery-item portrait">
+              <img src="/img/djecija.JPG" alt="Balkon">
+              <div class="caption">
+                  <h3>Dječja spavaća soba</h3>
+                  <p>Druga soba ima krevet na kat, dva ormara, stol i police.</p>
+              </div>
+          </div>
+      
+          <div class="gallery-item portrait">
+              <img src="/img/kada.jpg" alt="Vanjski izgled zgrade">
+              <div class="caption">
+                  <h3>Velika kutna kada</h3>
+                  <p>Kupaonica je dosta prostrana, s velikom kutnom kadom.</p>
+              </div>
+          </div>
+      
+          <div class="gallery-item portrait">
+              <img src="/img/lavandin.jpg" alt="Vanjski izgled zgrade">
+              <div class="caption">
+              </div>
+          </div>
+      </div>
+      
+    </div>
 </body>
 </html>
